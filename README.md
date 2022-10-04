@@ -4,6 +4,9 @@
 This is modified from > modified from https://github.com/numpy/numpy.org.
 --->
 
+[![GitHub Pages](https://github.com/haiiliin/abqpy.com/actions/workflows/pages.yml/badge.svg)](https://github.com/haiiliin/abqpy.com/actions/workflows/pages.yml)
+[![pages-build-deployment](https://github.com/haiiliin/abqpy.com/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/haiiliin/abqpy.com/actions/workflows/pages/pages-build-deployment)
+
 This is the source code for the website abqpy.com
 
 ## Getting Started

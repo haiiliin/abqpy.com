@@ -1,0 +1,33 @@
+# https://github.com/chabad360/hugo-gh-pages
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Publish Site
+        uses: chabad360/hugo-gh-pages@v2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          args: --minify
+          cname: abqpy.com

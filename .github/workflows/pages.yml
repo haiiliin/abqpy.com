@@ -29,5 +29,4 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          args: --minify
           cname: abqpy.com

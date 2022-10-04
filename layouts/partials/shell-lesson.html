@@ -7,4 +7,18 @@ To try the examples in the browser:
    the "Run" button in the toolbar
 """
 from abaqus import *
+from abaqusConstants import *
+from caeModules import *
+from driverUtils import *
+
+executeOnCaeStartup()
+
+# Model
+model = mdb.models['Model-1']
+
+# Part
+sketch = model.ConstrainedSketch(name='sketch', sheetSize=1.0)
+sketch.rectangle((0, 0), (1, 1))
+part = model.Part(name='part', dimensionality=THREE_D, type=DEFORMABLE_BODY)
+part.BaseSolidExtrude(sketch=sketch, depth=1)
 ```

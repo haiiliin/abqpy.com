@@ -18,7 +18,7 @@ params:
     text: abqpy
     link: /
   hero:
-    title: ABQPY
+    title: abqpy
     subtitle: Type Hints for Abaqus/Python Scripting
     buttontext: Getting Started
     buttonlink: /getstart/
@@ -52,11 +52,11 @@ params:
       - buttonText: Getting Started
         url: /getstart/
         text: Learn how to get started with abqpy, starting with the installation.
-      - buttonText: ABQPY Documentation
+      - buttonText: abqpy Documentation
         url: https://docs.abqpy.com/
         text: Read the documentation for abqpy, which includes all the details of the package.
         is_external: true
-      - buttonText: ABQPY API Summary
+      - buttonText: abqpy API Summary
         url: https://docs.abqpy.com/en/latest/summary.html
         text: Read the API summary for abqpy, which includes a list of the modules, classes, and functions.
         is_external: true

@@ -38,4 +38,4 @@ jobs:
           title: Update release (${{ steps.date.outputs.date }})
           labels: release
           branch: "update-release"
-          token: ${{ secrets.ACTION_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}

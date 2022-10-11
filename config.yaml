@@ -56,9 +56,9 @@ params:
         url: https://docs.abqpy.com/
         text: Read the documentation for abqpy, which includes all the details of the package.
         is_external: true
-      - buttonText: API Summary
-        url: https://docs.abqpy.com/en/latest/summary.html
-        text: Read the API summary for abqpy, which includes a list of the modules, classes, and functions.
+      - buttonText: API References
+        url: https://docs.abqpy.com/en/latest/api.html
+        text: Read the API References for abqpy, which includes a list of the modules, classes, and functions.
         is_external: true
   keyfeatures:
     features:

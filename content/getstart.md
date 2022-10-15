@@ -43,11 +43,11 @@ You can specify the version number when installing `abqpy`, for example:
 
 Using `pip`:
 ```shell
-pip install abqpy==2022.3.110
+pip install abqpy==2022.3.11
 ```
 Using `conda`:
 ```shell
-conda install -c haiiliin abqpy=2022.3.110
+conda install -c haiiliin abqpy=2022.3.11
 ```
 A better way is to use * to match specific version:
 ```shell

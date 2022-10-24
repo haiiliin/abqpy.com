@@ -1,12 +1,8 @@
 name: Update Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        type: string
-        description: Version number
-        required: true
+  repository_dispatch:
+    types: [release]
 
 jobs:
   update-release:
@@ -18,7 +14,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
-          ref: main
           fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -26,8 +21,8 @@ jobs:
           python-version: "3.10"
       - name: Update release
         run: |
-          python .github/create-release-news.py ${{ github.event.inputs.version }}
-          python .github/update-suggested-version.py ${{ github.event.inputs.version }}
+          python .github/create-release-news.py ${{ github.event.client_payload.VERSION }}
+          python .github/update-suggested-version.py ${{ github.event.client_payload.VERSION }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:

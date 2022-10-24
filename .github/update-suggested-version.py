@@ -10,7 +10,6 @@ import sys
 current_version = sys.argv[1]
 if current_version.startswith("v"):
     current_version = current_version[1:]
-minor_version = ".".join(current_version.split(".")[1:])
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.chdir("..")
 
@@ -18,8 +17,8 @@ for file in ['content/getstart.md']:
     with open(file, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    pattern = r'abqpy(=+?20\d\d\.)\d+?\.\d+'
-    repl = f'abqpy\g<1>{minor_version}'
+    pattern = r'abqpy(=+?)20\d\d\.\d+?\.\d+'
+    repl = f'abqpy\g<1>{current_version}'
     content = re.sub(pattern, repl, content)
     
     with open(file, 'w', encoding='utf-8') as f:

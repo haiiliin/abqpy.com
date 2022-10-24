@@ -23,7 +23,15 @@ jobs:
         run: |
           python .github/create-release-news.py ${{ github.event.client_payload.VERSION }}
           python .github/update-suggested-version.py ${{ github.event.client_payload.VERSION }}
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          base: HEAD
+          filters: |
+            changed:
+              - 'content/**'
       - name: Create Pull Request
+        if: steps.filter.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: Update release by GitHub Action https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}

@@ -21,7 +21,7 @@ params:
     title: abqpy
     subtitle: Type Hints for Abaqus/Python Scripting
     buttontext: Getting Started
-    buttonlink: /getstart/
+    buttonlink: https://docs.abqpy.com/en/latest/getting_started.html
     image: logo.svg
   shell:
     title: placeholder
@@ -31,7 +31,7 @@ params:
     docslink: Don't forget to check out the <a href="https://numpy.org/doc/stable" target="_blank">docs</a>.
   navbar:
     - title: Getting Started
-      url: /getstart/
+      url: https://docs.abqpy.com/en/latest/getting_started.html
     - title: Documentation
       url: https://docs.abqpy.com
       is_external: true
@@ -50,7 +50,7 @@ params:
   panel:
     tiles:
       - buttonText: Getting Started
-        url: /getstart/
+        url: https://docs.abqpy.com/en/latest/getting_started.html
         text: Learn how to get started with abqpy, starting with the installation.
       - buttonText: Documentation
         url: https://docs.abqpy.com/
@@ -87,7 +87,7 @@ params:
         title: ""
         links:
           - text: Getting Started
-            link: /getstart/
+            link: https://docs.abqpy.com/en/latest/getting_started.html
           - text: Documentation
             link: https://docs.abqpy.com
           - text: Tutorials

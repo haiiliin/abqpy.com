@@ -32,6 +32,7 @@ params:
   navbar:
     - title: Getting Started
       url: https://docs.abqpy.com/en/latest/getting_started.html
+      is_external: true
     - title: Documentation
       url: https://docs.abqpy.com
       is_external: true

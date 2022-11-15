@@ -17,14 +17,6 @@ it using `pip`:
 pip install abqpy
 ```
 
-### Install with conda
-
-`abqpy` is also uploaded to [anaconda](https://anaconda.org/haiiliin/abqpy), you can use 
-`conda` to install it:
-```shell
-conda install -c haiiliin abqpy
-```
-
 ### Install from source
 
 You may install the latest development version by cloning the 
@@ -44,11 +36,7 @@ You can specify the version number when installing `abqpy`, for example:
 Using `pip`:
 ```shell
 pip install abqpy==2022.3.18
-```
-Using `conda`:
-```shell
-conda install -c haiiliin abqpy=2022.3.18
-```
+
 A better way is to use * to match specific version:
 ```shell
 pip install abqpy==2022.*

@@ -42,9 +42,6 @@ params:
     - title: PyPI
       url: https://pypi.org/project/abqpy/
       is_external: true
-    - title: Anaconda
-      url: https://anaconda.org/haiiliin/abqpy/
-      is_external: true
     - title: Read the Docs
       url: https://readthedocs.org/projects/abqpy/
       is_external: true
@@ -67,7 +64,7 @@ params:
         text: The abqpy package supports almost all the Abaqus/Python APIs, and provides type hints for them, 
               which can be used by IDEs to provide better code completion and type checking.
       - title: Easy to Use
-        text: The abqpy package is easy to use and can be installed via pip, conda, or from source.
+        text: The abqpy package is easy to use and can be installed via pip, or from source.
               You can run your Abaqus/Python scripts with python directly even without opening Abaqus/CAE.
       - title: Easy to Interact with Abaqus/CAE
         text: The abqpy package provides a simple way to interact with Abaqus/CAE, You can run your Abaqus/Python 
@@ -107,8 +104,6 @@ params:
             link: https://github.com/haiiliin/abqpy/
           - text: PyPI
             link: https://pypi.org/project/abqpy/
-          - text: Anaconda
-            link: https://anaconda.org/haiiliin/abqpy/
           - text: Read the Docs
             link: https://readthedocs.org/projects/abqpy/
       column3:

@@ -22,7 +22,6 @@ jobs:
       - name: Update release
         run: |
           python .github/create-release-news.py ${{ github.event.client_payload.VERSION }}
-          python .github/update-suggested-version.py ${{ github.event.client_payload.VERSION }}
       - uses: dorny/paths-filter@v2
         id: filter
         with:

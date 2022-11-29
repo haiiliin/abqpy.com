@@ -20,7 +20,7 @@ date: {datetime.date.today().strftime("%Y-%m-%d")}
 ---
 
 abqpy `20XX.{minor_version}` release is out! Check out the release notes at GitHub:
-- [abqpy 2023.{minor_version}](https://github.com/haiiliin/abqpy/releases/tag/v2022.{minor_version})
+- [abqpy 2023.{minor_version}](https://github.com/haiiliin/abqpy/releases/tag/v2023.{minor_version})
 - [abqpy 2022.{minor_version}](https://github.com/haiiliin/abqpy/releases/tag/v2022.{minor_version})
 - [abqpy 2021.{minor_version}](https://github.com/haiiliin/abqpy/releases/tag/v2021.{minor_version})
 - [abqpy 2020.{minor_version}](https://github.com/haiiliin/abqpy/releases/tag/v2020.{minor_version})

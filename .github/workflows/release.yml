@@ -22,13 +22,6 @@ jobs:
       - name: Update release
         run: |
           python .github/create-release-news.py ${{ github.event.client_payload.VERSION }}
-      - uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          base: HEAD
-          filters: |
-            changed:
-              - 'content/**'
       - name: Create Pull Request
         if: steps.filter.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v4

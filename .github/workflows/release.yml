@@ -13,8 +13,6 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y/%m/%d')"
       - name: Checkout Repo
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -22,15 +20,12 @@ jobs:
       - name: Update release
         run: |
           python .github/create-release-news.py ${{ github.event.client_payload.VERSION }}
-      - name: Create Pull Request
-        if: steps.filter.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v4
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update release notes for ${{ github.event.client_payload.VERSION }}"
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          commit-message: Update release by GitHub Action https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          body: |
-            This is an automated pull request to update release by GitHub Action [${{ github.run_id }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
-          author: haiiliin <hailin.wang@connect.polyu.hk>
-          title: Update release (${{ steps.date.outputs.date }})
-          labels: release
-          branch: "update-release"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
